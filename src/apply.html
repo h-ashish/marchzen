@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+</head>
+<body>
+    <script>
+        console.log("Below is this value outside the function")
+        console.log(this);
+        function UserProfile(){
+            console.log("Below is this value inside the function");
+            console.log(this);
+            alert(this.age)
+            return "Hello";
+        }
+        let userOb = {
+            name: "ashish",
+            age: 23
+        }
+        //apply immediately calls the function. it doesnt return the new function but instead of the return value
+        //of the function. You can pass parameters as array to the apply function.
+        // Its the parameters you need to send to the function.
+        let result = UserProfile.apply(userOb,["Friday"]);
+        alert(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Prime number</title>
+</head>
+<body>
+    <p>keep clicking the button till random prime number is generated</p>
+	<button onclick="random()">Get Prime random number</button>
+	<div id="myDiv"></div>
+    <p>see stored values in local storage</p>
+
+	<script>
+		function random(){
+			let no=Math.floor(Math.random()*100+1);
+
+			while(findPrime(no)==true)
+			{
+				document.getElementById('myDiv').innerHTML =`The random prime number is: ${no}`
+				localStorage.setItem('value',no);
+				break;
+			}
+		}
+		function findPrime(no)
+		{
+			let flag=true;
+			for(let i=2;i<=no/2;i++){
+				if(no%i==0){
+					flag=false
+					break;
+				}
+			}
+			if(flag==true)
+				return true;
+			else
+				return false;
+		}
+	</script>
+
+</body>
+</html>

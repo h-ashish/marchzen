@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested destructuring in objects</title>
+</head>
+<body>
+    <script>
+        // let complexStudentOb = {name:"ashish",education:{grad:"BE",postgrad:"none",college:{collegeName:"DSATM"}}};
+
+        // let {name, education:{grad,postgrad,college:{collegeName}}} = complexStudentOb;
+
+        // alert(grad);
+        // alert(postgrad);
+        // alert(collegeName)
+
+        let complexStudentOb = {name:"ashish",education:{grad:"BE",postgrad:"none"}};
+
+        let {name, education:{grad,postgrad,college:{collegeName}= {collegeName:"default value"}}} = complexStudentOb;
+
+        alert(grad);
+        alert(postgrad);
+        alert(collegeName)
+    </script>
+    
+</body>
+</html>

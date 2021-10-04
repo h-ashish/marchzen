@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        // const students = ["ashish","prajwal","yogesh","munna"];
+        // const [student1 , student2, ...remaining] = students;
+        // console.log(student1);
+        // console.log(student2);
+        // console.log(remaining);
+
+        let sampleOb = {name:"ashish",hobby:"signing", interests:"music", age:23};
+        var {name:studentName = "default name", hobby: studentHobby = "default hobby", ...rest} = sampleOb;
+
+        //case1:
+        //if object empty
+        var sampleOb = {};
+        var {name: studentName = "default name", hobby: studentHobby = "default hobby", ...rest } = sampleOb;
+        console.log(studentName, studentHobby,rest);
+
+        //case 2:
+        //no default values and object is empty will rest in error
+        var sampleOb = {};
+        var {name: studentName = "default name", hobby: studentHobby = "default hobby", ...rest } = sampleOb;
+        console.log(studentName, studentHobby,rest);
+
+        //case3:
+        var sampleOb = {};
+        var {name,hobby,...rest} = sampleOb;
+        console.log(name,hobby);
+
+        //case4:
+        var sampleOb = {};
+        var {name = "default name", hobby = "default hobby",...rest} = sampleOb;
+        console.log(name, hobby)
+
+    </Script>
+</body>
+</html>

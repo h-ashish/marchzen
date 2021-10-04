@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+ 	
+ 	
+ <html>
+ <head>
+ 	<title>bubble sort</title>
+ </head>
+ <body>
+    <div id="out2"></div>
+    <div id="out"></div>
+   <div id="out1"></div>
+    <script type="text/javascript">
+        let inputArr=[1,5,12,14,4,15,8,19];
+ 		let ascendingbubbleSort = (inputArr) => {
+    let len = inputArr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            if (inputArr[j] > inputArr[j + 1]) {
+                let tmp = inputArr[j];
+                inputArr[j] = inputArr[j + 1];
+                inputArr[j + 1] = tmp;
+            }
+        }
+    }
+    return inputArr;
+};
+let descendingbubbleSort = (inputArr) => {
+    let len = inputArr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            if (inputArr[j+1] > inputArr[j]) {
+                let tmp = inputArr[j];
+                inputArr[j] = inputArr[j + 1];
+                inputArr[j + 1] = tmp;
+            }
+        }
+    }
+    return inputArr;
+};
+    document.getElementById("out").innerHTML=`The array in ascending order is [ " ${ascendingbubbleSort([1,4,5,8,12,14,15,19])} " ]`
+	document.getElementById("out1").innerHTML=`The array in descending order is [ " ${descendingbubbleSort([1,4,5,8,12,14,15,19])} " ] `
+console.log(descendingbubbleSort([1,4,5,8,12,14,15,19]))
+    document.getElementById("out2").innerHTML=`The given array is [ " ${inputArr} " ] `
+
+ 	</script>
+ 
+ </body>
+ </html>

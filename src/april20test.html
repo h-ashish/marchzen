@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring an array</title>
+</head>
+<body>
+    <script>
+        let studentsOne = ["sumit", "amit", "tushar"];
+        const [sumit,amit,...rest] = studentsOne;
+        console.log(rest);
+        console.log(studentsOne)
+    </script>
+</body>
+</html>

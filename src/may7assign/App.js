@@ -60,7 +60,6 @@ import RegistrationForm from './may7assign/Registrationform';
 import LoginForm from './may7assign/LoginForm';
 import MembersPage from './may7assign/MembersPage';
 import UserProfile from './may7assign/UserProfile'
-import Student from './Student';
 //this function will run whenever state changes means whenever the counter is called 
 // store.subscribe(function(){
 //   const currentState = store.getState();
@@ -129,7 +128,8 @@ function App() {
       </Route>
   
       </BrowserRouter> */}
-      {/* <ReduxCounter/> */}
+      {/* <ProductFullData/>
+      <ProductNamesInfo/> */}
       {/* <RandomPrime/> */}
       {/* <TodoLocalStorage/> */}
       {/* <UserRegistration/> */}
@@ -149,7 +149,6 @@ function App() {
       <Login/> */}
       {/* <Register/> */}
       {/* <May3test/> */}
-      {/* <Student/> */}
     </div>
   );
 }
